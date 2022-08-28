@@ -1,0 +1,33 @@
+<html>
+    <h1>Oddish or Evenish Calculator</h1>
+    <input type="text" id="sayi">
+    <input type="button" value="Hesapla" id="hesapla">
+ 
+ 
+    <script>
+    var hesapBtn=document.getElementById("hesapla");
+    hesapBtn.onclick=function oddishOrEvenish(){ 
+        var n=10
+        var toplam=0
+        var control
+        var number= document.getElementById("sayi").value
+        number = Number(number)
+        sayi=number
+
+        while(number !=0){
+        control=number%n
+        number-=control
+        toplam+=control/(n/10)
+        n=n*10
+        }
+        
+        if(toplam%2==0){
+            window.alert(sayi+' is even')
+        }
+        else{
+            window.alert(sayi+' is odd')
+        }
+    
+    }
+    </script>
+</html>
